@@ -1,0 +1,11 @@
+{
+  "name": "aircraft-tracker",
+  "version": "1.0.0",
+  "description": "An application that allows users to check on the current status of company airplanes",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "export NODE_ENV=test&& jasmine"
+  },
+  "author": "",
+  "license": "ISC"
+}
