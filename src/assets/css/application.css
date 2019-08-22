@@ -5,3 +5,16 @@ body {
 #test {
     background-color: hotpink;
 }
+
+.aircraft-box {
+    margin: 5px;
+    border: 1px solid #002c5c;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a.aircraft-link {
+    color: #ca921c;
+}

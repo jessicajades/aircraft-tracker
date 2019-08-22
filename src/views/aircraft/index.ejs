@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% include ../static/partials/head.ejs %>
+    </head>
+    <body>
+        <main class="container">
+            <% include ../static/partials/navbar.ejs %>
+
+            <h1>Aircraft</h1>
+            <h5>Click the tail number for tracking info</h5>
+
+            <div class="container">
+                <div class="row">
+                    <% aircraft.forEach((aircraft) => { %>
+                    <div class="col-sm aircraft-box">
+                        <a
+                            href="/aircraft/<%= aircraft.id %>"
+                            class="aircraft-link"
+                        >
+                            <%= aircraft.tailNumber %>
+                        </a>
+                    </div>
+
+                    <% }) %>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
