@@ -10,10 +10,16 @@ module.exports = {
                 res.render("aircraft/index", { aircraft });
             }
         });
-    }
+    },
 
-    // detailView(req, res, next) {
-    //     console.log("req.params.id", req.params.id);
-    //     res.send("testing");
-    // }
+    detailView(req, res, next) {
+        aircraftQueries.getAircraft(req.params.id, (err, aircraft) => {
+            if (err) {
+                req.flash("error", err);
+                res.redirect("/aircraft");
+            } else {
+                res.render("aircraft/details", { aircraft });
+            }
+        });
+    }
 };

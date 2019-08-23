@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% include ../static/partials/head.ejs %>
+    </head>
+    <body>
+        <main class="container">
+            <% include ../static/partials/navbar.ejs %>
+
+            <h1><%= aircraft.tailNumber %></h1>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Location:</strong> <%= aircraft.location %>
+                </li>
+                <li class="list-group-item">
+                    <strong>Next Trip:</strong> <%= aircraft.nextTrip %>
+                </li>
+                <li class="list-group-item">
+                    <strong>Previous Trip:</strong> <%= aircraft.lastTrip %>
+                </li>
+                <li class="list-group-item">
+                    <strong>Notes:</strong> <%= aircraft.notes %>
+                </li>
+            </ul>
+        </main>
+    </body>
+</html>
