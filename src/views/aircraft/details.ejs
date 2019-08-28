@@ -8,6 +8,14 @@
             <% include ../static/partials/navbar.ejs %>
 
             <h1><%= aircraft.tailNumber %></h1>
+
+            <% if (currentUser && currentUser.role != 0) { %>
+
+            <a href="/aircraft/<%= aircraft.id %>/edit" class="btn btn-success"
+                >Edit Aircraft Details</a
+            >
+            <% } %>
+
             <ul class="list-group">
                 <li class="list-group-item">
                     <strong>Location:</strong> <%= aircraft.location %>

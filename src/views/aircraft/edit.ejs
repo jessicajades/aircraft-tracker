@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% include ../static/partials/head.ejs %>
+    </head>
+    <body>
+        <% include ../static/partials/navbar.ejs %>
+
+        <main class="container">
+            <h1>Edit Aircraft Details for <%= aircraft.tailNumber %></h1>
+
+            <form action="/aircraft/<%= aircraft.id %>/update" method="post">
+                <div class="form-group">
+                    <label for="title">Location</label>
+                    <input
+                        value="<%= aircraft.location %>"
+                        type="text"
+                        class="form-control"
+                        name="location"
+                        aria-describedby="titleHelp"
+                        placeholder="Enter Location"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="title">Next Trip</label>
+                    <input
+                        value="<%= aircraft.nextTrip %>"
+                        type="text"
+                        class="form-control"
+                        name="nextTrip"
+                        aria-describedby="titleHelp"
+                        placeholder="Enter Next Trip"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="title">Previous Trip</label>
+                    <input
+                        value="<%= aircraft.lastTrip %>"
+                        type="text"
+                        class="form-control"
+                        name="lastTrip"
+                        aria-describedby="titleHelp"
+                        placeholder="Enter Previous Trip"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="body">Notes</label>
+                    <textarea
+                        rows="4"
+                        class="form-control"
+                        name="notes"
+                        placeholder="Enter Notes"
+                    >
+<%= aircraft.notes %></textarea
+                    >
+                </div>
+                <button type="submit" class="btn btn-primary">Update</button>
+            </form>
+        </main>
+
+        <% include ../static/partials/baseScripts.ejs %>
+    </body>
+</html>
