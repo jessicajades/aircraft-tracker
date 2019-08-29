@@ -32,7 +32,6 @@ describe("routes : aircraft", () => {
                 expect(res.statusCode).toBe(200);
                 expect(err).toBeNull();
                 expect(body).toContain("Aircraft");
-                expect(body).toContain("N818WB");
                 done();
             });
         });

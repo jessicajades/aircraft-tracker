@@ -1,9 +1,15 @@
 body {
-    padding-top: 60px;
+    padding-top: 100px;
+    color: #083462;
+    /* background-image: url("/images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%; */
 }
 
 #test {
-    background-color: hotpink;
+    background-color: #9c9c9c;
 }
 
 .aircraft-box {
@@ -17,4 +23,38 @@ body {
 
 a.aircraft-link {
     color: #ca921c;
+}
+
+img.logo {
+    max-width: 50%;
+}
+
+.jumbotron {
+    background: url("/images/background.jpg") no-repeat center;
+    height: 500px;
+    border-radius: 10px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.jumbotron img {
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: #ca921c;
+    border-color: #ca921c;
+}
+
+.btn-primary:hover {
+    background-color: #083462;
+    border-color: #083462;
+}
+
+.jumbo-txt {
+    background-color: #dfdfdf;
+    padding: 10px;
+    width: 80%;
+    border-radius: 10px;
+    opacity: 0.9;
 }
